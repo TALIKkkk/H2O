@@ -25,7 +25,16 @@ int main()
     cin >> D;
 
     Q = V / (3600 * t);
+    V = 1.27 * (Q / d * d);
+    hl = D * (L / d) * (V * V / 19.6);
+    hm = 0.1 * hl;
+    H = Hg + hl + hm + Hs;
     N = (9.8 * Q * H) / K;
+
+    
+
+    cout << "Мощность: " << N;
+    
 }
 
 
