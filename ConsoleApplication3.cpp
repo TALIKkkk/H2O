@@ -6,13 +6,7 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "rus");
-    V = 1.27 * (Q / d * d);
-    hl = D * (L / d) * (V * V / 19.6);
-    hm = 0.1 * hl;
-    H = Hg + hl + hm + Hs;
-
-    cout << "Мощность: " << N;
+    
     
 }
 
