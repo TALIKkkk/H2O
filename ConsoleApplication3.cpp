@@ -5,8 +5,8 @@
 using namespace std;
 int main()
 {
-    float K, v, t, Hg, Hs, L, D, d;
-    float N, Q, H, hl, hm, V;
+    double K, v, t, Hg, Hs, L, D, d;
+    double N, Q, H, hl, hm, V;
     cout << "Введите КПД: ";
     cin >> K;
     cout << "Введите объем воды: ";
@@ -24,7 +24,7 @@ int main()
     cout << "Введите лямбду: ";
     cin >> D;
 
-    Q = V / (3600 * t);
+    Q = v / (3600 * t);
     V = 1.27 * (Q / d * d);
     hl = D * (L / d) * (V * V / 19.6);
     hm = 0.1 * hl;
@@ -34,7 +34,7 @@ int main()
     
 
     cout << "Мощность: " << N;
-    
+    //RJYTW
 }
 
 
