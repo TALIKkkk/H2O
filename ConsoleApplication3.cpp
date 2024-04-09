@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     float K, v, t, Hg, Hs, L, D, d;
-    float N, Q, H, hl, hm, V;
+    float N, Q, H, hl, hm, V; 
     cout << "Введите КПД: ";
     cin >> K;
     cout << "Введите объем воды: ";
