@@ -6,12 +6,14 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "rus");
-    double K, v, t, Hg, Hs, L, D, d;
+    double K, v, t, Hg, Hs, L, D, d,v0,vh,S,n;
     float N, Q, H, hl, hm, V; 
+    cout << "Введите площадь огорода: ";
+    cin >> S;
+    cout << "Введите количество людей на участке: ";
+    cin >> n;
     cout << "Введите КПД: ";
     cin >> K;
-    cout << "Введите объем воды: ";
-    cin >> v;
     cout << "Введите время работы насоса: ";
     cin >> t;
     cout << "Введите геодезическая высота: ";
@@ -22,9 +24,9 @@ int main()
     cin >> L;
     cout << "Введите диаметр трубы: ";
     cin >> d;
-    cout << "Введите лямбду: ";
-    cin >> D;
-
+    vh = 0.2 * n;
+    v0 = 0.5 * S;
+    v = v0 + vh;
     Q = v / (3600 * t);
     V = 1.27 * (Q / d * d);
     hl = D * (L / d) * (V * V / 19.6);
