@@ -32,6 +32,14 @@ int main()
     hl = D * (L / d) * (V * V / 19.6);
     hm = 0.1 * hl;
     H = Hg + hl + hm + Hs;
+    Re = (v * d) / 0.01;
+    if (Re >= 2300)
+    {
+        D = 64 / Re;
+    }
+    else
+        D = 0.3 / Re *1 / 4.0;
+
     N = (9.8 * Q * H) / K;
 
     
