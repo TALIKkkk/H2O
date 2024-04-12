@@ -6,26 +6,29 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "rus");
-  
+    double K, v, t, Hg, Hs, L, D, d, v0, vh, S, n;
+    float N, Q, H, hl, hm, V;
+    cout << "Введите площадь огорода: ";
+    cin >> S;
+    cout << "Введите количество людей на участке: ";
+    cin >> n;
+    cout << "Введите КПД: ";
+    cin >> K;
+    cout << "Введите время работы насоса: ";
+    cin >> t;
+    cout << "Введите геодезическая высота: ";
+    cin >> Hg;
+    cout << "Введите свободный набор: ";
+    cin >> Hs;
+    cout << "Введите длину трубы: ";
+    cin >> L;
+    cout << "Введите диаметр трубы: ";
+    cin >> d;
+    vh = 0.2 * n;
+    v0 = 0.5 * S;
+    v = v0 + vh;
     Q = v / (3600 * t);
-     Re = (v * d) / 0.01;
-    if (Re >= 2300)
-    {
-        D = 64 / Re;
-    }
-    else
-        D = 0.3 / Re * 1 / 4.0;
-    V = 1.27 * (Q / d * d);
-    hl = D * (L / d) * (V * V / 19.6);
-    hm = 0.1 * hl;
-    H = Hg + hl + hm + Hs;
-    
-
-    N = (9.8 * Q * H) / K;
-
-    
-
-    cout << "Мощность: " << N;
+    N = (9.81 * Q * H) / K;
 
     //dtndm
     
